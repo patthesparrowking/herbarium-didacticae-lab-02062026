@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <title>Herbarium Didacticae</title>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/navigation.css" />
+
+  <script src="js/app.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <header class="app-header">
+      <div>
+        <p class="app-kicker">Mobiles Herbarium</p>
+        <h1>Herbarium Didacticae</h1>
+      </div>
+    </header>
+
+    <main class="app-content">
+      <section class="welcome-card">
+        <p class="section-label">Start</p>
+        <h2>Willkommen in deinem Herbarium</h2>
+        <p>
+          Erstelle Etiketten, verwalte deine Pflanzensammlung und entdecke deine Fundorte auf der Karte.
+        </p>
+
+        <a class="primary-action" href="pages/label-create.html">
+          Neues Etikett erstellen
+        </a>
+      </section>
+
+      <section class="quick-grid">
+        <a class="quick-card" href="pages/collection.html">
+          <span class="quick-icon">🌿</span>
+          <span>Sammlung</span>
+        </a>
+
+        <a class="quick-card" href="pages/map.html">
+          <span class="quick-icon">🗺️</span>
+          <span>Weltkarte</span>
+        </a>
+
+        <a class="quick-card" href="pages/dictionary.html">
+          <span class="quick-icon">📖</span>
+          <span>Wörterbuch</span>
+        </a>
+
+        <a class="quick-card" href="pages/templates.html">
+          <span class="quick-icon">🏷️</span>
+          <span>Vorlagen</span>
+        </a>
+      </section>
+    </main>
+
+    <div id="bottomnav-root"></div>
+
+  </div>
+</body>
+</html>

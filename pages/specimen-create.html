@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Sammlung | Herbarium Didacticae</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/forms.css">
+
+    <script src="../js/app.js" defer></script>
+    <script src="../js/navigation.js" defer></script>
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <header class="app-header">
+        <div>
+            <p class="app-kicker">Pflanzensammlung</p>
+            <h1>Meine Sammlung</h1>
+        </div>
+    </header>
+
+    <main class="app-content">
+
+        <section class="card">
+            <label class="form-field">
+                <span>Sammlung durchsuchen</span>
+                <input 
+                    type="search" 
+                    id="collectionSearch"
+                    placeholder="Name, Familie oder Fundort suchen..."
+                >
+            </label>
+        </section>
+
+        <a class="primary-action" href="specimen-create.html">
+            Neuen Pflanzeneintrag hinzufügen
+        </a>
+
+        <section id="specimenList"></section>
+
+    </main>
+
+    <div id="bottomnav-root"></div>
+
+</div>
+
+</body>
+</html>
