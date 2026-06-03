@@ -1,27 +1,32 @@
+const isInPagesFolder = window.location.pathname.includes("/pages/");
+
+const basePath = isInPagesFolder ? "" : "pages/";
+const homePath = isInPagesFolder ? "../index.html" : "index.html";
+
 const navItems = [
     {
         label: "Start",
-        href: "../index.html",
+        href: homePath,
         icon: "🏠"
     },
     {
         label: "Etikett",
-        href: "../pages/label-create.html",
+        href: basePath + "label-create.html",
         icon: "🏷️"
     },
     {
         label: "Sammlung",
-        href: "../pages/collection.html",
+        href: basePath + "collection.html",
         icon: "🌿"
     },
     {
         label: "Karte",
-        href: "../pages/map.html",
+        href: basePath + "map.html",
         icon: "🗺️"
     },
     {
         label: "Mehr",
-        href: "../pages/more.html",
+        href: basePath + "more.html",
         icon: "☰"
     }
 ];
