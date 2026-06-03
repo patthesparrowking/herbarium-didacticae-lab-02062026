@@ -363,7 +363,7 @@ function setupLabelEditForm() {
                 collector: formData.get("collector"),
                 collectionDate: formData.get("collectionDate"),
                 notes: formData.get("notes"),
-                updatedAt: new Date().toISOString()
+                updatedAt: new Date().toISOString(),
                 templateId: formData.get("templateId") || "classic",
             };
         });
