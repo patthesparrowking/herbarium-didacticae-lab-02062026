@@ -1,27 +1,27 @@
 const navItems = [
     {
         label: "Start",
-        href: "/index.html",
+        href: "../index.html",
         icon: "🏠"
     },
     {
         label: "Etikett",
-        href: "pages/label-create.html",
+        href: "../pages/label-create.html",
         icon: "🏷️"
     },
     {
         label: "Sammlung",
-        href: "pages/collection.html",
+        href: "../pages/collection.html",
         icon: "🌿"
     },
     {
         label: "Karte",
-        href: "pages/map.html",
+        href: "../pages/map.html",
         icon: "🗺️"
     },
     {
         label: "Mehr",
-        href: "pages/more.html",
+        href: "../pages/more.html",
         icon: "☰"
     }
 ];

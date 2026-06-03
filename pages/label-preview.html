@@ -5,12 +5,13 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <title>Pflanzendetail | Herbarium Didacticae</title>
+    <title>Etikett Vorschau</title>
 
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/navigation.css">
     <link rel="stylesheet" href="../css/forms.css">
+    <link rel="stylesheet" href="../css/print.css">
 
     <script src="../js/app.js" defer></script>
     <script src="../js/navigation.js" defer></script>
@@ -20,20 +21,24 @@
 
 <div class="app-shell">
 
-    <header class="app-header">
+    <header class="app-header no-print">
         <div>
-            <p class="app-kicker">Sammlungseintrag</p>
-            <h1>Pflanzendetail</h1>
+            <p class="app-kicker">Druckvorschau</p>
+            <h1>Etikett</h1>
         </div>
     </header>
 
-    <main class="app-content">
+    <main class="app-content print-content">
 
-        <section id="specimenDetail"></section>
+        <section id="labelPreview"></section>
+
+        <button class="primary-action no-print" type="button" onclick="window.print()">
+            Etikett drucken
+        </button>
 
     </main>
 
-    <div id="bottomnav-root"></div>
+    <div class="no-print" id="bottomnav-root"></div>
 
 </div>
 

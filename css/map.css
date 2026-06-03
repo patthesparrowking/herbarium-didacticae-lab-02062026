@@ -1,0 +1,43 @@
+.map-shell {
+    height: 100dvh;
+}
+
+.map-content {
+    min-height: 0;
+
+    padding-bottom: calc(
+        var(--bottom-nav-height) + env(safe-area-inset-bottom)
+    );
+}
+
+#plantMap {
+    width: 100%;
+    height: 100%;
+    min-height: calc(
+        100dvh
+        - 96px
+        - var(--bottom-nav-height)
+        - env(safe-area-inset-bottom)
+    );
+}
+
+.leaflet-popup-content {
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+}
+
+.map-popup-title {
+    font-weight: 700;
+    margin-bottom: .25rem;
+}
+
+.map-popup-link {
+    display: inline-block;
+    margin-top: .5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}

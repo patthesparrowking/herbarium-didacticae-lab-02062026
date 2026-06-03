@@ -1,0 +1,47 @@
+[
+  {
+    "id": "forest",
+    "category": "Standort",
+    "de": "Wald",
+    "la": "silva",
+    "grammar": "silva, -ae f.",
+    "usage": "in silva = im Wald",
+    "insert": "in silva"
+  },
+  {
+    "id": "meadow",
+    "category": "Standort",
+    "de": "Wiese",
+    "la": "pratum",
+    "grammar": "pratum, -i n.",
+    "usage": "in prato = auf der Wiese",
+    "insert": "in prato"
+  },
+  {
+    "id": "near",
+    "category": "Präposition",
+    "de": "bei / in der Nähe von",
+    "la": "prope",
+    "grammar": "prope + Akkusativ",
+    "usage": "prope silvam = nahe beim Wald",
+    "insert": "prope silvam"
+  },
+  {
+    "id": "dry",
+    "category": "Standortbedingung",
+    "de": "trocken",
+    "la": "siccus",
+    "grammar": "siccus, -a, -um",
+    "usage": "locus siccus = trockener Standort",
+    "insert": "locus siccus"
+  },
+  {
+    "id": "wet",
+    "category": "Standortbedingung",
+    "de": "feucht",
+    "la": "humidus",
+    "grammar": "humidus, -a, -um",
+    "usage": "locus humidus = feuchter Standort",
+    "insert": "locus humidus"
+  }
+]

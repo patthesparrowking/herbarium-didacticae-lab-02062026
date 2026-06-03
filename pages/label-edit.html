@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <title>Pflanze hinzufügen | Herbarium Didacticae</title>
+    <title>Etikett bearbeiten | Herbarium Didacticae</title>
 
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/layout.css">
@@ -17,48 +17,51 @@
 </head>
 
 <body>
-
 <div class="app-shell">
 
     <header class="app-header">
         <div>
-            <p class="app-kicker">Neuer Sammlungseintrag</p>
-            <h1>Pflanze hinzufügen</h1>
+            <p class="app-kicker">Gespeichertes Etikett</p>
+            <h1>Etikett bearbeiten</h1>
         </div>
     </header>
 
     <main class="app-content">
 
-        <form class="form-card" id="specimenForm">
+        <form class="form-card" id="labelEditForm">
+
+            <section class="form-section">
+    <p class="section-label">Vorlage</p>
+
+    <label class="form-field">
+        <span>Etikett-Vorlage</span>
+        <select name="templateId">
+            <option value="classic">Klassisch</option>
+            <option value="compact">Kompakt</option>
+            <option value="didactic">Didaktisch</option>
+        </select>
+    </label>
+</section>
+
+            <input type="hidden" name="id">
 
             <section class="form-section">
                 <p class="section-label">Pflanze</p>
 
                 <label class="form-field">
                     <span>Wissenschaftlicher Name</span>
-                    <input type="text" name="scientificName" placeholder="z. B. Galium odoratum" required>
+                    <input type="text" name="scientificName" required>
                 </label>
 
                 <label class="form-field">
                     <span>Deutscher Name</span>
-                    <input type="text" name="germanName" placeholder="z. B. Waldmeister">
+                    <input type="text" name="germanName">
                 </label>
 
                 <label class="form-field">
                     <span>Familie</span>
-                    <input type="text" name="family" placeholder="z. B. Rubiaceae">
+                    <input type="text" name="family">
                 </label>
-            </section>
-
-            <section class="form-section">
-                <p class="section-label">Foto</p>
-
-                <label class="form-field">
-                    <span>Pflanzenfoto</span>
-                    <input type="file" name="image" accept="image/*">
-                </label>
-
-                <img id="imagePreview" class="image-preview" alt="">
             </section>
 
             <section class="form-section">
@@ -66,18 +69,23 @@
 
                 <label class="form-field">
                     <span>Fundortbeschreibung</span>
-                    <textarea name="location" rows="3" placeholder="z. B. Laubwald bei Bayreuth"></textarea>
+                    <textarea name="location" rows="3"></textarea>
+                </label>
+
+                <label class="form-field">
+                    <span>Lateinische Fundortangabe</span>
+                    <textarea name="latinLocation" rows="3"></textarea>
                 </label>
 
                 <div class="form-grid-2">
                     <label class="form-field">
                         <span>Breitengrad</span>
-                        <input type="number" step="any" name="latitude" placeholder="49.945">
+                        <input type="number" step="any" name="latitude">
                     </label>
 
                     <label class="form-field">
                         <span>Längengrad</span>
-                        <input type="number" step="any" name="longitude" placeholder="11.571">
+                        <input type="number" step="any" name="longitude">
                     </label>
                 </div>
             </section>
@@ -87,7 +95,7 @@
 
                 <label class="form-field">
                     <span>Sammler:in</span>
-                    <input type="text" name="collector" placeholder="Name">
+                    <input type="text" name="collector">
                 </label>
 
                 <label class="form-field">
@@ -97,12 +105,12 @@
 
                 <label class="form-field">
                     <span>Notizen</span>
-                    <textarea name="notes" rows="3" placeholder="Weitere Beobachtungen"></textarea>
+                    <textarea name="notes" rows="3"></textarea>
                 </label>
             </section>
 
             <button class="primary-action" type="submit">
-                Pflanze speichern
+                Änderungen speichern
             </button>
 
         </form>
@@ -112,6 +120,5 @@
     <div id="bottomnav-root"></div>
 
 </div>
-
 </body>
 </html>

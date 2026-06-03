@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Pflanze bearbeiten | Herbarium Didacticae</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/forms.css">
+
+    <script src="../js/app.js" defer></script>
+    <script src="../js/navigation.js" defer></script>
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <header class="app-header">
+        <div>
+            <p class="app-kicker">Sammlungseintrag</p>
+            <h1>Pflanze bearbeiten</h1>
+        </div>
+    </header>
+
+    <main class="app-content">
+
+        <form class="form-card" id="specimenEditForm">
+
+            <input type="hidden" name="id">
+
+            <section class="form-section">
+                <p class="section-label">Pflanze</p>
+
+                <label class="form-field">
+                    <span>Wissenschaftlicher Name</span>
+                    <input type="text" name="scientificName" required>
+                </label>
+
+                <label class="form-field">
+                    <span>Deutscher Name</span>
+                    <input type="text" name="germanName">
+                </label>
+
+                <label class="form-field">
+                    <span>Familie</span>
+                    <input type="text" name="family">
+                </label>
+            </section>
+
+            <section class="form-section">
+    <p class="section-label">Foto</p>
+
+    <img id="currentImagePreview" class="image-preview" alt="Aktuelles Pflanzenfoto">
+
+    <label class="form-field">
+        <span>Neues Foto auswählen</span>
+        <input type="file" name="image" accept="image/*">
+    </label>
+
+    <img id="imagePreview" class="image-preview" alt="">
+</section>
+
+            <section class="form-section">
+                <p class="section-label">Fundort</p>
+
+                <label class="form-field">
+                    <span>Fundortbeschreibung</span>
+                    <textarea name="location" rows="3"></textarea>
+                </label>
+
+                <div class="form-grid-2">
+                    <label class="form-field">
+                        <span>Breitengrad</span>
+                        <input type="number" step="any" name="latitude">
+                    </label>
+
+                    <label class="form-field">
+                        <span>Längengrad</span>
+                        <input type="number" step="any" name="longitude">
+                    </label>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <p class="section-label">Sammlung</p>
+
+                <label class="form-field">
+                    <span>Sammler:in</span>
+                    <input type="text" name="collector">
+                </label>
+
+                <label class="form-field">
+                    <span>Sammeldatum</span>
+                    <input type="date" name="collectionDate">
+                </label>
+
+                <label class="form-field">
+                    <span>Notizen</span>
+                    <textarea name="notes" rows="3"></textarea>
+                </label>
+            </section>
+
+            <button class="primary-action" type="submit">
+                Änderungen speichern
+            </button>
+
+        </form>
+
+    </main>
+
+    <div id="bottomnav-root"></div>
+
+</div>
+
+</body>
+</html>

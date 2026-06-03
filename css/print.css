@@ -1,0 +1,102 @@
+/* ==========================
+   LABEL PREVIEW
+========================== */
+
+.herbarium-label {
+    background: white;
+    color: #111;
+
+    border: 1px solid #111;
+
+    padding: 12mm;
+
+    width: 100%;
+    max-width: 90mm;
+
+    margin: 0 auto;
+
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.herbarium-label-title {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+
+    margin-bottom: 8mm;
+}
+
+.herbarium-label-row {
+    margin-bottom: 3mm;
+}
+
+.herbarium-label-row strong {
+    display: block;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+.herbarium-label-scientific {
+    font-style: italic;
+    font-size: 1.05rem;
+}
+
+/* ==========================
+   PRINT
+========================== */
+
+@media print {
+    body {
+        background: white;
+    }
+
+    .no-print,
+    .bottom-nav {
+        display: none !important;
+    }
+
+    .app-shell {
+        display: block;
+        min-height: auto;
+        box-shadow: none;
+    }
+
+    .app-content {
+        padding: 0;
+        overflow: visible;
+    }
+
+    .herbarium-label {
+        max-width: none;
+        width: 90mm;
+        min-height: 55mm;
+        margin: 0;
+    }
+}
+
+/* ==========================
+   TEMPLATE VARIANTS
+========================== */
+
+.herbarium-label-compact {
+    max-width: 75mm;
+    padding: 8mm;
+    font-size: .9rem;
+}
+
+.herbarium-label-compact .herbarium-label-title {
+    margin-bottom: 5mm;
+}
+
+.herbarium-label-didactic {
+    max-width: 100mm;
+    border: 2px solid #111;
+}
+
+.herbarium-label-didactic .herbarium-label-title {
+    border-bottom: 1px solid #111;
+    padding-bottom: 4mm;
+}

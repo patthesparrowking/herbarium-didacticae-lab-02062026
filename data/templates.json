@@ -1,0 +1,42 @@
+[
+  {
+    "id": "classic",
+    "name": "Klassisch",
+    "description": "Schlichtes Herbarium-Etikett mit klarer wissenschaftlicher Struktur.",
+    "fields": [
+      "scientificName",
+      "germanName",
+      "family",
+      "location",
+      "coordinates",
+      "collector",
+      "collectionDate"
+    ]
+  },
+  {
+    "id": "compact",
+    "name": "Kompakt",
+    "description": "Platzsparendes Etikett für kleine Belege.",
+    "fields": [
+      "scientificName",
+      "family",
+      "location",
+      "collectionDate"
+    ]
+  },
+  {
+    "id": "didactic",
+    "name": "Didaktisch",
+    "description": "Etikett mit zusätzlichen Notizen für Unterricht und Lernkontexte.",
+    "fields": [
+      "scientificName",
+      "germanName",
+      "family",
+      "location",
+      "coordinates",
+      "collector",
+      "collectionDate",
+      "notes"
+    ]
+  }
+]

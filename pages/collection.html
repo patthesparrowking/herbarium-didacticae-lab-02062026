@@ -29,16 +29,40 @@
 
     <main class="app-content">
 
-        <section class="card">
-            <label class="form-field">
-                <span>Sammlung durchsuchen</span>
-                <input 
-                    type="search" 
-                    id="collectionSearch"
-                    placeholder="Name, Familie oder Fundort suchen..."
-                >
-            </label>
-        </section>
+<section class="card collection-filters">
+
+    <label class="form-field">
+        <span>Sammlung durchsuchen</span>
+        <input 
+            type="search" 
+            id="collectionSearch"
+            placeholder="Name, Familie oder Fundort suchen..."
+        >
+    </label>
+
+    <div class="form-grid-2">
+
+        <label class="form-field">
+            <span>Familie</span>
+            <select id="familyFilter">
+                <option value="">Alle Familien</option>
+            </select>
+        </label>
+
+        <label class="form-field">
+            <span>Jahr</span>
+            <select id="yearFilter">
+                <option value="">Alle Jahre</option>
+            </select>
+        </label>
+
+    </div>
+
+    <button class="secondary-action" type="button" id="resetFilters">
+        Filter zurücksetzen
+    </button>
+
+</section>
 
         <a class="primary-action" href="specimen-create.html">
             Neuen Pflanzeneintrag hinzufügen

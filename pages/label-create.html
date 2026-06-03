@@ -6,10 +6,10 @@
 
   <title>Etikett erstellen | Herbarium Didacticae</title>
 
-    <link rel="stylesheet" href="../css/base.css" />
-    <link rel="stylesheet" href="../css/layout.css" />
-    <link rel="stylesheet" href="../css/navigation.css" />
-    <link rel="stylesheet" href="../css/forms.css" />
+<link rel="stylesheet" href="../css/base.css" />
+<link rel="stylesheet" href="../css/layout.css" />
+<link rel="stylesheet" href="../css/navigation.css" />
+<link rel="stylesheet" href="../css/forms.css" />
 
   <script src="../js/app.js" defer></script>
   <script src="../js/navigation.js" defer></script>
@@ -28,6 +28,19 @@
     <main class="app-content">
 
       <form class="form-card" id="labelForm">
+
+        <section class="form-section">
+    <p class="section-label">Vorlage</p>
+
+    <label class="form-field">
+        <span>Etikett-Vorlage</span>
+        <select name="templateId" id="labelTemplateSelect">
+            <option value="classic">Klassisch</option>
+            <option value="compact">Kompakt</option>
+            <option value="didactic">Didaktisch</option>
+        </select>
+    </label>
+</section>
 
         <section class="form-section">
           <p class="section-label">Pflanze</p>
@@ -51,10 +64,27 @@
         <section class="form-section">
           <p class="section-label">Fundort</p>
 
-          <label class="form-field">
-            <span>Fundortbeschreibung</span>
-            <textarea name="location" rows="3" placeholder="z. B. Laubwald bei Bayreuth"></textarea>
-          </label>
+<label class="form-field">
+    <span>Fundortbeschreibung</span>
+    <textarea
+        name="location"
+        rows="3"
+        placeholder="z. B. in silva prope Bayreuth"
+    ></textarea>
+</label>
+
+<button class="secondary-action" type="button" id="openDictionaryOverlay">
+    Wörterbuch öffnen
+</button>
+
+<label class="form-field">
+    <span>Lateinische Fundortangabe</span>
+    <textarea
+        name="latinLocation"
+        rows="3"
+        placeholder="z. B. in silva prope Bayreuth"
+    ></textarea>
+</label>
 
           <div class="form-grid-2">
             <label class="form-field">
@@ -93,6 +123,31 @@
         </button>
 
       </form>
+
+      <section class="overlay" id="dictionaryOverlay" hidden>
+    <div class="overlay-panel">
+
+        <div class="overlay-header">
+            <h2>Wörterbuch</h2>
+
+            <button class="icon-button" type="button" id="closeDictionaryOverlay">
+                ×
+            </button>
+        </div>
+
+        <label class="form-field">
+            <span>Begriff suchen</span>
+            <input
+                type="search"
+                id="dictionaryOverlaySearch"
+                placeholder="Deutsch oder Latein suchen..."
+            >
+        </label>
+
+        <div id="dictionaryOverlayList"></div>
+
+    </div>
+</section>
 
     </main>
 
