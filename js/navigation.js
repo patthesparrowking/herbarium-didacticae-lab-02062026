@@ -7,27 +7,27 @@ const navItems = [
     {
         label: "Start",
         href: homePath,
-        icon: "🏠"
+        icon: `<svg><use href="../assets/icons/sprite.svg#icon-home"></use></svg>`
     },
     {
         label: "Etikett",
         href: basePath + "label-create.html",
-        icon: "🏷️"
+        icon: `<svg><use href="../assets/icons/sprite.svg#icon-new-label"></use></svg>`
     },
     {
         label: "Sammlung",
         href: basePath + "collection.html",
-        icon: "🌿"
+        icon: `<svg><use href="../assets/icons/sprite.svg#icon-book"></use></svg>`
     },
     {
         label: "Karte",
         href: basePath + "map.html",
-        icon: "🗺️"
+        icon: `<svg><use href="../assets/icons/sprite.svg#icon-map"></use></svgs=>`
     },
     {
         label: "Mehr",
         href: basePath + "more.html",
-        icon: "☰"
+        icon: `<svg><use href="../assets/icons/sprite.svg#icon-archive"></use></svgclass=>`
     }
 ];
 
@@ -45,7 +45,7 @@ function createBottomNav() {
 
         const icon = document.createElement("span");
         icon.className = "nav-icon";
-        icon.textContent = item.icon;
+        icon.innerHTML = item.icon;
 
         const label = document.createElement("span");
         label.textContent = item.label;

@@ -12,9 +12,9 @@
 
     padding-bottom: env(safe-area-inset-bottom);
 
-    background: var(--color-primary);
 
-    border-top: 1px solid rgba(255,255,255,.12);
+    border-top: 1px solid rgba(225, 178, 75, 0.35);
+    background: linear-gradient(180deg, #1d3a25, #102418);
 
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -29,26 +29,52 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: .25rem;
+    gap: 0.25rem;
 
     color: rgba(255,255,255,.68);
 
     font-size: .7rem;
     font-weight: 500;
+    font-size: clamp(0.68rem, 2.8vw, 0.82rem);
+    line-height: 1;
+
+    /* border-radius: 0.85rem; */
+
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .nav-icon {
-    font-size: 1.25rem;
+    width: clamp(2rem, 6vw, 2.5rem);
+    height: clamp(2rem, 6vw, 2.5rem);
     line-height: 1;
+}
+
+.nav-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: rgba(255,255,255,.68);
+    fill: none;
+    stroke-width: 2;
+}
+
+.nav-icon svg path,
+.nav-icon svg circle,
+.nav-icon svg line,
+.nav-icon svg polyline,
+.nav-icon svg rect {
+    stroke: #E1B24B !important;
 }
 
 .nav-item.active {
     color: var(--color-accent);
+    color: #E1B24B;
+    background: rgba(225, 178, 75, 0.11);
 }
 
 .nav-item:active {
     background: rgba(255,255,255,.08);
 }
+
 
 /* ==========================
    DESKTOP UPGRADE

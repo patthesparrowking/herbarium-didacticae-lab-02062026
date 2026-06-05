@@ -48,9 +48,9 @@ textarea {
 
     --color-accent: #E1B24B;
 
-    --color-background: #F5F1E8;
+    --color-background: hsl(38, 50%, 88%);
 
-    --color-surface: #FFFFFF;
+    --color-surface: #F4ECE1;
 
     --color-text: #243126;
     --color-text-light: #66706A;

@@ -1293,22 +1293,22 @@ function setupDataBackup() {
     }
 }
 
-if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function () {
-        const swPath = window.location.pathname.includes("/pages/")
-            ? "../service-worker.js"
-            : "service-worker.js";
+// if ("serviceWorker" in navigator) {
+//     window.addEventListener("load", function () {
+//         const swPath = window.location.pathname.includes("/pages/")
+//             ? "../service-worker.js"
+//             : "service-worker.js";
 
-        navigator.serviceWorker
-            .register(swPath)
-            .then(() => {
-                console.log("Service Worker registriert");
-            })
-            .catch(error => {
-                console.error("Service Worker konnte nicht registriert werden:", error);
-            });
-    });
-}
+//         navigator.serviceWorker
+//             .register(swPath)
+//             .then(() => {
+//                 console.log("Service Worker registriert");
+//             })
+//             .catch(error => {
+//                 console.error("Service Worker konnte nicht registriert werden:", error);
+//             });
+//     });
+// }
 
 document.addEventListener("DOMContentLoaded", function () {
     setupLabelForm();
